@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'alternate_auth/home_styles/css/style.css' %}" />
+    <title>Easybank</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <img src="{% static 'alternate_auth/home_styles/images/logo1.png'%}" alt="" />
+      <a href="{% url 'login' %}"><button style="padding: 12px 28px;border: none;outline-width: 0;color: rgb(255, 255, 255);border-radius: 24px;cursor: pointer;font-weight: 900;background-image: linear-gradient(55deg,#ff7435,#fc5050);">login</button></a>
+      <a href="{% url 'signup_ref' %}"><button style="padding: 12px 28px;border: none;outline-width: 0;color: rgb(255, 255, 255);border-radius: 24px;cursor: pointer;font-weight: 900;background-image: linear-gradient(55deg,#ff7435,#fc5050);">Register</button></a>
+    </nav>
+    <header class="hero-section">
+      <div class="hero-text-container">
+        <h1
+          >Next generation<br />
+          Authentication<br />
+          system
+        </h1>
+        <p>Creating authentication process in a creative way <br />
+          to increase security and make it easier for <br />
+          users to remember their passwords
+        </p>
+      </div>
+      <div class="hero-img-container">
+        <img src="{% static 'alternate_auth/home_styles/images/bobimage1.jpg' %}" alt="" />
+      </div>
+    </header>
+    <div class="container">
+      <section class="why-us">
+        <h1>Why do we need this authentication system?</h1>
+        <p>Some senior citizens in our nation struggle to remember complex passwords,so they write them down, keep them, and ask<br />
+          a stranger to help them enter them in during the login procedure, making the process insecure.However,the majority <br />
+          of elderly people  can recall images that are specific to their particular field of interest,field of interest,<br />
+          therefore we made thoseimagesas their password so they wouldn'thave to share it with anyone.<br />
+          </p>
+      </section>
+      <section class="Register">
+        <h1>REGISTRATION PROCESS</h1>
+        <p>* Click on the Register button <br />
+           * Choose your area of trust.<br />
+           * Fill the information details<br />
+           * select the objects in the image in a sequence<br />
+           * the sequence of selection will be set as password<br />
+              to the user<br />
+          </p>
+      </section>
+      <section class="login">
+        <h1>LOGIN PROCESS</h1>
+        <p>* Click on the login button <br />
+           * enter the user name<br />
+           * select the object as same in login process<br />
+           * you will be logged in
+          </p>
+      </section>
+    </div>
+  </body>
+</html>

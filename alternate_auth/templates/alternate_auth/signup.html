@@ -1,0 +1,327 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>SIGN UP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	
+	<link rel="stylesheet" href="{%  static 'alternate_auth/login_page_styles/css/style.css' %}">
+
+	</head>
+  <style>
+/* The container */
+.contain {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.contain:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.contain input:checked ~ .checkmark {
+  background:linear-gradient(135deg, #fd0000 0%, #0031ff 100%);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.contain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.contain .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.objects{
+    cursor: pointer;
+}
+</style>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">REGISTER</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center" >
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last" style="background: linear-gradient(135deg, #fd0000 0%, #0031ff 100%);">
+
+							<!--div class="text w-100">
+								<h2>Welcome to login</h2>
+                                <p style="color: white;">Please enter your login Id and password</p>
+							</div-->
+                            {% if id == '21' %}
+                            <div>
+                                <h4 style="color: white;">Select any 4 objects to set as Password... </h4>
+                                <img src="{% static 'alternate_auth/login_page_styles/images/img11/main11.jpeg' %}" alt="img1" style="width: 100%;height: 80%; position: relative;top: 13px">
+                                <h4 style="color: white;text-align: left;position: relative;top: 10px;"><b>PASSWORD: </b><button type="button" class="btn btn-info" style="width: 67px;height: 29px;padding: initial;margin-left: 150px;" onclick="reset_password()">RESET</button></h4>
+                                <div class="result" style="height: 79px;width: 100%;margin-top: 5px;justify-content: left;border:2px solid #ffffff;overflow: auto;white-space: nowrap;display: inline-block;" id="result">
+
+                                </div>
+
+                                <div id="img11" style="width: 8%;height: 34px;position: relative;left: 20%;bottom: 279px;" class="objects" onclick="object_select(11)"></div>
+
+                                <div id="img12" style="width: 5%;height: 23px;position: relative;left: 29%;bottom: 302px;" class="objects" onclick="object_select(12)"></div>
+                                <div id="img13"  style="width: 10%;height: 34px;position: relative;left: 50%;bottom: 398px;" class="objects" onclick="object_select(13)"></div>
+                                <div id="img14" style="width: 27%;height: 65px;position: relative;left: 3%;bottom: 480px;" class="objects" onclick="object_select(14)"></div>
+                                <div id="img15" style="width: 11%;height: 59px;position: relative;left: 87%;bottom: 376px;" class="objects" onclick="object_select(15)"></div>
+                                <div id="img16" style="width: 13%;height: 66px;position: relative;left: 69%;bottom: 526px;" class="objects" onclick="object_select(16)"></div>
+                            </div>
+                            {% elif id == '11' %}
+                            <div>
+                                <h4 style="color: white;">Select any 4 objects to set as Password... </h4>
+                                <img src="{% static 'alternate_auth/login_page_styles/images/img21/main1.jpg' %}" alt="img1" style="width: 100%;height: 80%;position: relative;top: 13px;">
+                                <h4 style="color: white;text-align: left;position: relative;top: 10px;"><b>PASSWORD: </b><button type="button" class="btn btn-info" style="width: 67px;height: 29px;padding: initial;margin-left: 150px;" onclick="reset_password()">RESET</button></h4>
+                                <div class="result" style="height: 79px;width: 100%;margin-top: 5px;justify-content: left;border:2px solid #ffffff;overflow: auto;white-space: nowrap;display: inline-block;" id="result">
+
+                                </div>
+
+                                <div id="img11" style="width: 23%;height: 148px;position: relative;left: 8%;bottom: 327px;" class="objects" onclick="object_select(21)"></div>
+                                <div id="img12" style="width: 6%;height: 28px;position: relative;left: 64%;bottom: 356px;" class="objects" onclick="object_select(22)"></div>
+                                <div id="img13"  style="width: 13%;height: 55px;position: relative;left: 78%;bottom: 412px;" class="objects" onclick="object_select(23)"></div>
+                                <div id="img14" style="width: 10%; height: 37px; position: relative; left: 80%; bottom: 504px;" class="objects" onclick="object_select(24)"></div>
+                                <div id="img15" style="width: 20%; height: 29px; position: relative; left: 61%; bottom: 585px;" class="objects" onclick="object_select(25)"></div>
+                                <div id="img16" style="width: 10%; height: 44px; position: relative; left: 39%; bottom: 620px;" class="objects" onclick="object_select(26)"></div>
+                            </div>
+                                {% elif id == '31'%}
+
+                                <div>
+                                <h4 style="color: white;">Select any 4 objects to set as Password... </h4>
+                                <img src="{% static 'alternate_auth/login_page_styles/images/img31/life_style4.jpg' %}" alt="img1" style="width: 100%;height: 80%;position: relative;top: 13px;">
+                                <h4 style="color: white;text-align: left;position: relative;top: 10px;"><b>PASSWORD: </b><button type="button" class="btn btn-info" style="width: 67px;height: 29px;padding: initial;margin-left: 150px;" onclick="reset_password()">RESET</button></h4>
+                                <div class="result" style="height: 79px;width: 100%;margin-top: 5px;display: inline-block;justify-content: left;border:2px solid #ffffff;overflow: auto;white-space: nowrap;" id="result">
+
+                                </div>
+
+                                <div id="img11" style="width: 18%; height: 21px; position: relative; left: 28%; bottom: 285px;" class="objects" onclick="object_select(31)"></div>
+                                <div id="img12" style="width: 7%;height: 36px;position: relative;left: 17%;bottom: 314px;" class="objects" onclick="object_select(32)"></div>
+                                <div id="img13"  style="width: 15%;height: 59px;position: relative;left: 24%;bottom: 412px;" class="objects" onclick="object_select(33)"></div>
+                                <div id="img14" style="width: 46%;height: 81px;position: relative;left: 7%;bottom: 349px;" class="objects" onclick="object_select(34)"></div>
+                                <div id="img15" style="width: 40%;height: 52px;position: relative;left: 52%;bottom: 382px;" class="objects" onclick="object_select(35)"></div>
+                                <div id="img16" style="width: 23%;height: 60px;position: relative;left: 61%;bottom: 495px;" class="objects" onclick="object_select(36)"></div>
+                            </div>
+
+                            {% endif %}
+			      </div>
+						<div class="login-wrap p-4 p-lg-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign UP</h3>
+			      		</div>
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+									</p>
+								</div>
+			      	</div>
+							<form class="signin-form" method="POST" action="{% url 'signup' id %}">
+                                {% csrf_token %}
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="name">Username</label>
+			      			<input type="text" class="form-control" placeholder="Username" required name="username">
+			      		</div>
+                                <div class="form-group mb-3">
+		            	<label class="label" for="email">Email</label>
+		              <input type="email" class="form-control" placeholder="Email" required name="email">
+		            </div>
+		            <div class="form-group mb-3">
+		            	<label class="label" for="age">Age</label>
+		              <input type="number" class="form-control" placeholder="Age" required name="age">
+		            </div>
+
+                    <div class="form-group mb-3">
+		            	<label class="label" for="account_number">Account Number</label>
+		              <input type="number" class="form-control" placeholder="Account Number" required name="account_number">
+		            </div>
+
+                    <div class="form-group mb-3">
+		            	<label class="label" for="ph_number">Phone Number</label>
+		              <input type="number" class="form-control" placeholder="Phone Number" required name="ph_number">
+		            </div>
+
+                                <div class="form-group mb-3" style="display: none;">
+		            	<label class="label" for="password">Password</label>
+		              <input type="password" class="form-control" placeholder="Password" required name="password" id="password">
+		            </div>
+                                <div class="form-group mb-3" style="display: none;">
+		            	<label class="label" for="password-type">Password-type</label>
+		              <input type="number" class="form-control" placeholder="Password" required name="password-type" id="password-type">
+		            </div>
+		            	<button class="form-control btn btn-primary submit px-3" style="border: none;" id="submit_button" disabled>Sign Up</button>
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{%  static 'alternate_auth/login_page_styles/js/jquery.min.js' %}"></script>
+  <script src="{%  static 'alternate_auth/login_page_styles/js/popper.js' %}"></script>
+  <script src="{%  static 'alternate_auth/login_page_styles/js/bootstrap.min.js' %}"></script>
+  <script src="{%  static 'alternate_auth/login_page_styles/js/main.js' %}"></script>
+    <script>
+        /*
+            11->!!
+            12->!@
+            13->!#
+            14->!$
+            15->!%
+            16->!^
+         */
+        function check_click(n){
+
+        }
+        let image_count=0;
+        let password="";
+        function object_select(img){
+            let result=document.getElementById('result');
+            if (parseInt(img)-(parseInt(img)%10)==10){
+                if (image_count<10) {
+                    if (img==11){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img11/image11.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="11 "
+                  }else if(img==12){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img11/image12.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="12 "
+                    }else if(img==13){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img11/image13.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="13 "
+                    }else if(img==14){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img11/image14.jpeg' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="14 "
+                    }else if(img==15){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img11/image15.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="15 "
+                    }else{
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img11/image16.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="16 "
+                    }
+                }
+            }else if((parseInt(img)-(parseInt(img)%10)==20)){
+
+                if (image_count<10) {
+                    if (img==21){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img21/image21.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="21 "
+                    }else if(img==22){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img21/image22.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="22 "
+                    }else if(img==23){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img21/image23.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="23 "
+                    }else if(img==24){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img21/image24.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="24 "
+                    }else if(img==25){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img21/image25.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="25 "
+                    }else{
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img21/image26.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="26 "
+                    }
+                }
+            }else if((parseInt(img)-(parseInt(img)%10)==30)){
+
+                if (image_count<10) {
+                    if (img==31){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img31/image1.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="31 "
+                    }else if(img==32){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img31/image2.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="32 "
+                    }else if(img==33){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img31/image3.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="33 "
+                    }else if(img==34){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img31/image4.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="34 "
+                    }else if(img==35){
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img31/image5.png' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="35 "
+                    }else{
+                        result.innerHTML += "<div style='width: 20%;height: 70px;margin-left:5%;margin-top:5px;display:inline-block;'><img src='{% static 'alternate_auth/login_page_styles/images/img31/image6.jpg' %}' alt='img' style='width: 90%;height: 90%;'></div>";
+                        password+="36 "
+                    }
+                }
+
+            }
+            image_count+=1;
+            let pass=document.getElementById('password');
+            pass.value=password;
+            let pass_type=document.getElementById('password-type');
+            pass_type.value=((parseInt(img)-(parseInt(img)%10))/10).toString();
+            console.log(pass_type.value);
+            if(image_count==4){
+                console.log("enabled");
+                let button=document.getElementById('submit_button');
+                button.disabled=false;
+            }
+
+        }
+        function reset_password(){
+            image_count=0;
+            password="";
+            let button=document.getElementById('submit_button');
+            button.disabled=true;
+            let result=document.getElementById('result');
+            result.innerHTML="";
+        }
+
+
+
+  </script>
+
+	</body>
+
+
+</html>
