@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7526e009-2595-49a8-88d5-c4cb77efe4e2/AppServices/subscriptions/7526e009-2595-49a8-88d5-c4cb77efe4e2/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/alternate-authentication",
+    "appService.deploySubpath": "."
+}
